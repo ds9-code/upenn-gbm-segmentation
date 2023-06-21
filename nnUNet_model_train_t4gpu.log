@@ -1,0 +1,44 @@
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 160, 112], 'median_image_size_in_voxels': [140.0, 172.0, 137.0], 'spacing': [1.0, 1.0, 1.0], 'normalization_schemes': ['ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization'], 'use_mask_for_norm': [True, True, True, True], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2], 'num_pool_per_axis': [5, 5, 4], 'pool_op_kernel_sizes': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 1]], 'conv_kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'unet_max_num_features': 320, 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': False} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_Glioblastoma', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 1.0, 1.0], 'original_median_shape_after_transp': [140, 172, 137], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 1464.0, 'mean': 329.0144958496094, 'median': 322.0, 'min': 0.0, 'percentile_00_5': 138.0, 'percentile_99_5': 963.0, 'std': 93.77518463134766}, '1': {'max': 2347.0, 'mean': 427.0850524902344, 'median': 379.0, 'min': 0.0, 'percentile_00_5': 153.0, 'percentile_99_5': 1258.0, 'std': 186.98681640625}, '2': {'max': 2957.0, 'mean': 538.0934448242188, 'median': 515.0, 'min': 0.0, 'percentile_00_5': 74.0, 'percentile_99_5': 1556.0, 'std': 351.8751525878906}, '3': {'max': 1536.0, 'mean': 397.7358093261719, 'median': 376.0, 'min': 0.0, 'percentile_00_5': 110.0, 'percentile_99_5': 973.0, 'std': 146.7981414794922}}} 
+
+2023-06-20 23:04:22.527492: unpacking dataset...
+2023-06-20 23:06:07.365514: unpacking done...
+2023-06-20 23:06:07.388932: do_dummy_2d_data_aug: False
+2023-06-20 23:06:07.421343: Creating new 5-fold cross-validation split...
+2023-06-20 23:06:07.440737: Desired fold for training: 0
+2023-06-20 23:06:07.443774: This split has 93 training and 24 validation cases.
+2023-06-20 23:06:09.390455: Unable to plot network architecture:
+2023-06-20 23:06:09.395136: No module named 'hiddenlayer'
+2023-06-20 23:06:09.436661: 
+2023-06-20 23:06:09.442796: Epoch 0
+2023-06-20 23:06:09.447204: Current learning rate: 0.01
+using pin_memory on device 0
+using pin_memory on device 0
+2023-06-20 23:39:23.679734: train_loss -0.2684
+2023-06-20 23:39:23.694872: val_loss -0.4996
+2023-06-20 23:39:23.699146: Pseudo dice [0.5712, 0.6045, 0.7626]
+2023-06-20 23:39:23.702043: Epoch time: 1994.25 s
+2023-06-20 23:39:23.704693: Yayy! New best EMA pseudo Dice: 0.6461
+2023-06-20 23:39:33.134134: 
+2023-06-20 23:39:33.138163: Epoch 1
+2023-06-20 23:39:33.141010: Current learning rate: 0.00999
+2023-06-21 00:17:33.795011: train_loss -0.5734
+2023-06-21 00:17:33.806581: val_loss -0.6038
+2023-06-21 00:17:33.814183: Pseudo dice [0.5977, 0.7962, 0.7909]
+2023-06-21 00:17:33.817472: Epoch time: 2280.67 s
+2023-06-21 00:17:33.820387: Yayy! New best EMA pseudo Dice: 0.6543
+2023-06-21 00:17:43.347137: 
+2023-06-21 00:17:43.350785: Epoch 2
+2023-06-21 00:17:43.354485: Current learning rate: 0.00998
