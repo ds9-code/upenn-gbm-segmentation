@@ -1,2 +1,0 @@
-10 iterations per epoch - 25s - v100 - DICE: 0.26 - 0.29
-25 iterations per epoch - 111s - v100 - DICE: 0.37
