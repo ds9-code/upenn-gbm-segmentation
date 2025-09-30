@@ -1,5 +1,5 @@
 # Automated segmentation of glioblastoma tumors from MRI scans
-Develop a deep learning medical segmentation model using the nnUNet framework to perform automated tumor sub-region segmentation of Glioblastoma multi-parametric MRI scans. Published paper in JEI: https://doi.org/10.59720/23-265; presented at NVIDIA Global Tech Conference
+Develop a deep learning medical segmentation model using the nnUNet framework to perform automated tumor sub-region segmentation of Glioblastoma multi-parametric MRI scans. Published paper in JEI: https://doi.org/10.59720/23-265; presented at NVIDIA Global Tech Conference.
 
 # References:
 1. Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
