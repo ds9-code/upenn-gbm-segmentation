@@ -26,7 +26,7 @@ metrics. The nn-Unet architecture was adapted from the original U-Net paper by R
 
 # Results
 
-<img width="431" height="534" alt="Screenshot 2026-02-27 at 2 18 35 PM" src="https://github.com/user-attachments/assets/023aeb6e-4771-4b9d-81bf-d78ac7c05356" />
+<img width="431" height="534" alt="Screenshot 2026-02-27 at 2 18 35 PM" src="https://github.com/user-attachments/assets/023aeb6e-4771-4b9d-81bf-d78ac7c05356" /><br>
 
 Performance metrics for the nnU-Net neural network models on the test dataset. Summary statistics of the models’ prediction performance on the test dataset across the whole tumor (WT), enhancing tumor (ET) and edema (ED) subregions. Model inference was run on the test dataset and the summary statistics for the DSC score, Sensitivity, and the 95% Hausdorff distance were calculated. Since MRI sequences are specific to certain tumor regions, results were not computed for non-relevant regions when not all MRI sequences were utilized.
 
