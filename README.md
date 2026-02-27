@@ -7,12 +7,14 @@ This repository contains code and notebooks for building, training, and evaluati
 The dataset used is based on the UPenn-GBM cohort, a publicly available MRI dataset with manually refined tumor labels suitable for segmentation benchmarking and radiomic analysis.
 
 # Repository Structure
-├── 00_t501_glio_folder_setup.py           # Project directory and organization script
-├── 01_t501_glio_data_setup.py             # Download / prepare dataset directories
-├── 02_t501_glio_process_labels.py         # Process and normalize segmentation masks
-├── 03_t501_glio_gen_dataset_json.py       # Create nnU-Net dataset JSONs
-├── 04_t501_glio_verify_data_integrity.py   # Check data integrity and consistency
-├── 05_t501_glio_model_train.py            # Model training using nnU-Net framework
-├── 06_t501_glio_model_inference.py         # Perform inference with a trained model
-├── 08_t501_glio_volumetric_analysis.ipynb  # Notebook for post-processing and volumetric evaluation
-├── README.md                              # This file
+| Path | Description |
+|------|-------------|
+| `00_t501_glio_folder_setup.py` | Initializes and organizes the project directory structure for nnU-Net compatibility. |
+| `01_t501_glio_data_setup.py` | Prepares and structures the UPenn-GBM MRI dataset for training and inference. |
+| `02_t501_glio_process_labels.py` | Processes and standardizes segmentation masks (label normalization and formatting). |
+| `03_t501_glio_gen_dataset_json.py` | Generates the nnU-Net dataset configuration JSON file. |
+| `04_t501_glio_verify_data_integrity.py` | Performs dataset validation checks to ensure file consistency and completeness. |
+| `05_t501_glio_model_train.py` | Launches nnU-Net model training for GBM segmentation. |
+| `06_t501_glio_model_inference.py` | Runs inference using trained nnU-Net models and outputs predicted segmentation masks. |
+| `08_t501_glio_volumetric_analysis.ipynb` | Notebook for volumetric evaluation, Dice computation, and post-processing analysis. |
+| `README.md` | Project documentation, setup instructions, and usage guide. |
